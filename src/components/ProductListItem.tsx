@@ -4,7 +4,7 @@ import Colors from '@/src/constants/Colors';
 import { Product } from '@/src/types';
 import { Link } from 'expo-router';
 
-export const defultPizzaImage = 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/default.png'
+export const defaultPizzaImage = 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/default.png'
 
 type ProductListItemProps = {
   product: Product;
@@ -15,7 +15,7 @@ const ProductListItem = ({ product }: ProductListItemProps) => {
     <Link href={`/menu/${product.id}`} asChild>
       <Pressable style={styles.container}>
         <Image
-          source={{uri: product.image || defultPizzaImage}}
+          source={{uri: product.image || defaultPizzaImage}}
           style={styles.image}
           resizeMode='contain'
         />
