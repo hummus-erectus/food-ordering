@@ -6,9 +6,9 @@ export * from 'expo-router';
 declare module 'expo-router' {
   export namespace ExpoRouter {
     export interface __routes<T extends string = string> extends Record<string, unknown> {
-      StaticRoutes: `/` | `/(tabs)` | `/(tabs)/` | `/(tabs)/menu` | `/(tabs)/menu/` | `/(tabs)/two` | `/..\components\CartListItem` | `/_sitemap` | `/cart` | `/menu` | `/menu/` | `/two`;
-      DynamicRoutes: `/(tabs)/menu/${Router.SingleRoutePart<T>}` | `/menu/${Router.SingleRoutePart<T>}`;
-      DynamicRouteTemplate: `/(tabs)/menu/[id]` | `/menu/[id]`;
+      StaticRoutes: `/` | `/(admin)` | `/(admin)/` | `/(admin)/menu` | `/(admin)/menu/` | `/(admin)/two` | `/(user)` | `/(user)/` | `/(user)/menu` | `/(user)/menu/` | `/(user)/two` | `/_sitemap` | `/cart` | `/menu` | `/menu/` | `/two`;
+      DynamicRoutes: `/(admin)/menu/${Router.SingleRoutePart<T>}` | `/(user)/menu/${Router.SingleRoutePart<T>}` | `/menu/${Router.SingleRoutePart<T>}`;
+      DynamicRouteTemplate: `/(admin)/menu/[id]` | `/(user)/menu/[id]` | `/menu/[id]`;
     }
   }
 }
